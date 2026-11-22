@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coming soon</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Something new is on the way.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2314101f'/%3E%3Ccircle cx='32' cy='28' r='9' fill='%23ffd9a0'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:#0e0b18;color:#f4efff;font-family:Poppins,system-ui,-apple-system,Segoe UI,sans-serif;overflow:hidden}
+.stage{position:relative;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 24px 12vh;text-align:center;
+  background:radial-gradient(ellipse at 50% 0%,#2a1d4a 0%,#0e0b18 65%)}
+
+/* Spotlight cone */
+.beam{position:absolute;top:0;left:50%;width:min(90vw,640px);height:78vh;transform:translateX(-50%);transform-origin:50% 0;
+  clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);
+  background:linear-gradient(to bottom,rgba(255,226,170,.55),rgba(255,226,170,.14) 70%,rgba(255,226,170,.04));
+  animation:sway 9s ease-in-out infinite,flicker 6s linear infinite}
+/* Pool of light on the floor */
+.pool{position:absolute;left:50%;bottom:calc(12vh + 150px);width:min(70vw,420px);height:70px;transform:translateX(-50%);
+  background:radial-gradient(ellipse at center,rgba(255,226,170,.5),rgba(255,226,170,0) 70%)}
+
+.mic{position:relative;width:110px;height:auto;margin-bottom:28px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.5))}
+h1{margin:0 0 10px;font-weight:600;font-size:clamp(1.4rem,5vw,2rem);letter-spacing:-.01em}
+p{margin:0;max-width:30ch;opacity:.75;font-size:1.05rem}
+
+@keyframes sway{0%,100%{transform:translateX(-50%) rotate(-2.5deg)}50%{transform:translateX(-50%) rotate(2.5deg)}}
+@keyframes flicker{0%,92%,100%{opacity:1}94%{opacity:.78}96%{opacity:1}98%{opacity:.88}}
+@media (prefers-reduced-motion:reduce){.beam{animation:none}}
+</style>
+</head>
+<body>
+<main class="stage">
+  <div class="beam" aria-hidden="true"></div>
+  <div class="pool" aria-hidden="true"></div>
+
+  <svg class="mic" viewBox="0 0 120 250" role="img" aria-label="An empty microphone stand in a spotlight">
+    <defs>
+      <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#8d86a3"/><stop offset=".5" stop-color="#e7e2f4"/><stop offset="1" stop-color="#8d86a3"/>
+      </linearGradient>
+    </defs>
+    <!-- stand -->
+    <rect x="57" y="92" width="6" height="132" rx="3" fill="#3a3350"/>
+    <ellipse cx="60" cy="230" rx="38" ry="9" fill="#2a2440"/>
+    <!-- clip -->
+    <path d="M40 78 Q60 100 80 78" fill="none" stroke="#3a3350" stroke-width="6" stroke-linecap="round"/>
+    <!-- mic head -->
+    <rect x="38" y="14" width="44" height="66" rx="22" fill="url(#metal)"/>
+    <g stroke="#6d6585" stroke-width="1.6" opacity=".7">
+      <line x1="38" y1="34" x2="82" y2="34"/><line x1="38" y1="48" x2="82" y2="48"/><line x1="38" y1="62" x2="82" y2="62"/>
+      <line x1="60" y1="14" x2="60" y2="80"/>
+    </g>
+  </svg>
+
+  <h1>Nothing here yet.</h1>
+  <p>But it won’t stay this way. Check back soon for good things.</p>
+</main>
+</body>
+</html>
