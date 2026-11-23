@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcel Vines</title>
+<meta name="description" content="Marcel Vines – pop artist. Listen, follow, and get in touch.">
+<meta name="theme-color" content="#0a1424">
+<meta name="robots" content="noindex, nofollow">   <!-- TEST COPY: delete this line for launch -->
+
+<!-- Share preview image: share.jpg in the same folder -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marcel Vines">
+<meta property="og:description" content="Pop artist. Listen now.">
+<meta property="og:image" content="https://marcelvinesmusic.com/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230a1424'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23f2b866'/%3E%3C/svg%3E">
+
+<!-- Analytics (optional, privacy-friendly). Uncomment after signing up:
+<script defer data-domain="marcelvinesmusic.com" src="https://plausible.io/js/script.js"></script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a1424;--text:#f2efe8;--mut:#9fb0c8;--gold:#f2b866;--tag:#f2b866;--card:#102039;--line:rgba(255,255,255,.1);--input:#0a1424;--btn:#f2b866;--btn-text:#0a1424;--foot:#060d18}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Archivo,system-ui,-apple-system,Segoe UI,sans-serif;font-stretch:100%;line-height:1.55;overflow-x:hidden}
+h1,h2,h3{font-family:Archivo,"Arial Black",system-ui,sans-serif;font-stretch:125%;font-weight:800;text-transform:uppercase}
+.wrap{max-width:960px;margin:0 auto}
+section{padding:72px 24px}
+h2{font-size:clamp(1.25rem,5vw,1.7rem);letter-spacing:.05em;margin:0 0 30px;display:flex;align-items:center;gap:18px}
+h2::after{content:"";flex:1;height:2px;background:var(--gold)}
+h1{font-size:clamp(2.6rem,14vw,6rem);line-height:.93;margin:0 0 16px;letter-spacing:-.01em}
+
+.hero{position:relative;min-height:92vh;display:flex;flex-direction:column;justify-content:space-between;padding:20px 24px 48px;color:#fff}
+.top{position:relative;z-index:2;max-width:960px;width:100%;margin:0 auto;display:flex;justify-content:flex-end}
+.hero-body{position:relative;z-index:2;max-width:960px;width:100%;margin:0 auto}
+.socials{display:flex;gap:10px}
+.socials a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;border:1px solid rgba(255,255,255,.7);background:rgba(10,20,36,.2);backdrop-filter:blur(4px);transition:background .15s,color .15s,border-color .15s}
+.socials a:hover{background:var(--gold);border-color:var(--gold);color:#0a1424}
+.socials svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sub{font-weight:700;font-stretch:112%;letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;margin:0 0 28px;white-space:pre}
+
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;font-stretch:112%;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;
+  color:var(--btn-text);background:var(--btn);text-decoration:none;padding:16px 30px;border-radius:3px;transition:background .15s,color .15s,transform .15s}
+.btn:hover{background:var(--gold);color:#0a1424;transform:translateY(-2px)}
+.btn.sm{padding:11px 18px;font-size:.72rem}
+.hero .btn{background:#fff;color:#0a1424}
+.hero .btn:hover{background:var(--gold)}
+
+.feature{display:grid;gap:28px;align-items:center}
+.cover{width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;display:grid;place-items:center;font-size:3rem;color:#fff;background:linear-gradient(180deg,#5b8fd1,#e7c6a3)}
+.feature .tag{font-weight:700;font-stretch:112%;letter-spacing:.2em;font-size:.7rem;text-transform:uppercase;color:var(--tag);margin:0}
+.feature h3{font-size:clamp(1.5rem,6.5vw,2.5rem);line-height:1.05;margin:8px 0 24px}
+.video{position:relative;aspect-ratio:16/9;border-radius:4px;overflow:hidden;background:#000;margin-top:32px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (min-width:760px){.feature{grid-template-columns:minmax(0,380px) 1fr;gap:52px}}
+
+.about p{font-size:clamp(1.2rem,4.4vw,1.6rem);line-height:1.45;max-width:640px;margin:0}
+.music iframe{width:100%;height:352px;border:0;border-radius:12px}
+
+.show{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px 18px;margin-bottom:12px}
+.date{flex:0 0 64px;text-align:center;font-weight:800;font-stretch:125%;font-size:1.5rem;line-height:1.05}
+.date small{display:block;font-weight:700;font-size:.68rem;letter-spacing:.15em;color:var(--tag)}
+.show .info{flex:1;min-width:0}.show .info b{display:block}.show .info span{color:var(--mut);font-size:.9rem}
+
+.stack{display:flex;flex-direction:column;gap:16px;max-width:560px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:24px}
+.card h3{margin:0 0 6px;font-size:1.05rem;letter-spacing:.04em}
+.card p{margin:0 0 18px;color:var(--mut)}
+.signup{display:flex;gap:8px}
+.signup input{flex:1;min-width:0;font:inherit;padding:13px 14px;border-radius:3px;border:1px solid var(--line);background:var(--input);color:var(--text)}
+.signup input::placeholder{color:var(--mut)}
+.signup input:focus{outline:2px solid var(--gold);outline-offset:0}
+.fine{font-size:.75rem;margin:10px 0 0!important}
+
+footer{padding:60px 24px 76px;text-align:center;background:var(--foot);color:#eef3fb}
+footer p{margin:0 0 18px;opacity:.7;letter-spacing:.22em;text-transform:uppercase;font-size:.72rem}
+.links{display:flex;justify-content:center;gap:32px}
+.links a{color:#fff;font-weight:700;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:6px}
+.links a:hover{color:var(--gold)}
+.booking{margin-top:30px!important;text-transform:none!important;letter-spacing:0!important;font-size:.95rem!important;opacity:1!important}
+.booking a{color:#fff;font-weight:700}
+.copy{margin-top:28px;font-size:.72rem;opacity:.5}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.hero{text-align:center;background:
+  linear-gradient(to top,rgba(10,20,36,.96) 0%,rgba(10,20,36,.45) 50%,rgba(10,20,36,.2) 100%),
+  url("hero.jpg") 67% 35%/cover no-repeat,#0a1424}
+.top{justify-content:center}
+.latest,.music{background:#0d1a2f}
+.cover{box-shadow:0 0 70px rgba(242,184,102,.22)}
+.hero .btn{background:var(--gold);color:#0a1424}
+.hero .btn:hover{background:#fff}
+@media (min-aspect-ratio:1/1){
+  .hero{overflow:hidden;background:radial-gradient(70% 70% at 50% 100%,rgba(242,184,102,.22),transparent 70%),#0a1424}
+  .hero::before{content:"";position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:min(58%,600px);background:url("hero.jpg") 67% 30%/cover no-repeat;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 28%,#000 72%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 28%,#000 72%,transparent 100%)}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,20,36,.85) 0%,rgba(10,20,36,0) 50%)}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="top"><nav class="socials" id="socials" aria-label="Social links"></nav></div>
+  <div class="hero-body">
+    <h1>Marcel<br>Vines</h1>
+    <p class="sub" id="heroSub"></p>
+    <a class="btn" href="#latest">Press play</a>
+  </div>
+</header>
+
+<section class="latest" id="latest">
+  <div class="wrap">
+    <h2>New music</h2>
+    <div class="feature">
+      <div class="cover" id="cover" aria-hidden="true">♪</div>
+      <div>
+        <p class="tag" id="featTag"></p>
+        <h3 id="featTitle"></h3>
+        <a class="btn" id="featBtn" href="#" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+    <div class="video" id="video"></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p id="statement"></p>
+  </div>
+</section>
+
+<section class="music" id="music">
+  <div class="wrap">
+    <h2>Listen</h2>
+    <div id="player"></div>
+  </div>
+</section>
+
+<section class="shows" id="shows">
+  <div class="wrap">
+    <h2>Live</h2>
+    <div id="showList"></div>
+  </div>
+</section>
+
+<section class="support" id="join">
+  <div class="wrap">
+    <h2>Stay close</h2>
+    <div class="stack">
+      <div class="card" id="merchCard">
+        <h3>Wear it</h3>
+        <p>Official Marcel Vines gear.</p>
+        <a class="btn" id="merch" href="#" target="_blank" rel="noopener">Shop merch</a>
+      </div>
+      <div class="card" id="tipCard">
+        <h3>Fuel the next song</h3>
+        <p>Every bit helps me keep making music.</p>
+        <a class="btn" id="tip" href="#" target="_blank" rel="noopener">Leave a tip</a>
+      </div>
+      <div class="card" id="mailCard">
+        <h3>Get it first</h3>
+        <p>New music, shows, and merch drops. Zero spam.</p>
+        <form class="signup" id="signup" method="post" target="_blank">
+          <input type="email" name="email" id="emailField" placeholder="Your email" required aria-label="Email address">
+          <button class="btn" type="submit">Join</button>
+        </form>
+        <p class="fine">We’ll only use your email to send Marcel’s updates. Unsubscribe any time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Press &amp; booking</p>
+  <div class="links">
+    <a id="epk" href="#" target="_blank" rel="noopener">EPK</a>
+    <a id="linktree" href="#" target="_blank" rel="noopener">Linktree</a>
+  </div>
+  <p class="booking">Booking: <a id="booking" href="#"></a></p>
+  <div class="copy">© <span id="yr"></span> Marcel Vines</div>
+</footer>
+
+<script>
+/* ===== EDIT THESE ===== */
+const CONFIG = {
+  statement: "I’m a pop artist from Boston. My new single, “LUV U RIGHT,” is out now. Thanks for listening.",
+
+  socials: {                      // leave "" to hide an icon
+    instagram: "https://instagram.com/marcelvinesmusic",
+    tiktok: "https://tiktok.com/@marcelvinesmusic",
+    youtube: "https://youtube.com/@marcelvinesmusic",
+    spotify: "https://open.spotify.com/artist/3RWStmRNn1y7AnsHaXyfJK"
+  },
+
+  featured: {                     // the newest release
+    tag: "New single · Out now",
+    title: "LUV U RIGHT",
+    cta: "Stream it",
+    url: "https://open.spotify.com/artist/3RWStmRNn1y7AnsHaXyfJK",   // swap for the song’s own link later
+    cover: "cover.jpg"                     // optional: "cover.jpg" in the repo
+  },
+  youtubeVideoId: "",             // the 11 characters after v= in a YouTube link
+  spotifyArtistId: "3RWStmRNn1y7AnsHaXyfJK",
+
+  shows: [                        // e.g. { date: "2027-03-14", venue: "Venue", city: "City", url: "https://…" }
+  ],
+
+  merchUrl: "#",                  // Printify store link
+  tipUrl: "https://example.com/tip",   // PLACEHOLDER: replace with Ko-fi, Buy Me a Coffee, PayPal.me, etc.
+  mailingFormAction: "https://example.com/subscribe",   // PLACEHOLDER: replace with the form URL from your email provider
+  mailingEmailField: "email",     // the email field name your provider expects
+
+  epkUrl: "https://epkbuilder.com/site/marcel-vines",
+  linktreeUrl: "https://linktr.ee/marcelvinesmusic",
+  bookingEmail: "marcelvinesmusic@gmail.com"
+};
+/* ====================== */
+
+const $ = id => document.getElementById(id);
+const ICONS = {
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>',
+  tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.1 4.2 5 4.4"/>',
+  youtube: '<rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/>',
+  spotify: '<circle cx="12" cy="12" r="9.5"/><path d="M7 9.5c3.5-1 7-.7 10 1M7.5 12.5c3-.8 6-.5 8.5 1M8 15.3c2.5-.6 5-.3 7 .8"/>'
+};
+const safe = u => /^(https?:\/\/|#)/.test(u || '') ? u : '#';
+
+// Socials
+Object.entries(CONFIG.socials).forEach(([name, url]) => {
+  if (!url || !ICONS[name]) return;
+  const a = document.createElement('a');
+  a.href = safe(url); a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', name);
+  a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[name] + '</svg>';
+  $('socials').appendChild(a);
+});
+
+// Statement, links, footer
+$('statement').textContent = CONFIG.statement;
+$('epk').href = safe(CONFIG.epkUrl);
+$('linktree').href = safe(CONFIG.linktreeUrl);
+$('merch').href = safe(CONFIG.merchUrl);
+$('tip').href = safe(CONFIG.tipUrl);
+if (!/^https/.test(CONFIG.merchUrl)) $('merchCard').style.display = 'none';
+if (!/^https/.test(CONFIG.tipUrl)) $('tipCard').style.display = 'none';
+$('booking').textContent = CONFIG.bookingEmail;
+$('booking').href = 'mailto:' + CONFIG.bookingEmail;
+$('yr').textContent = new Date().getFullYear();
+
+// Featured release
+const F = CONFIG.featured;
+$('featTag').textContent = F.tag;
+$('featTitle').textContent = F.title;
+$('featBtn').textContent = F.cta;
+$('featBtn').href = safe(F.url);
+if (F.cover) {
+  const img = document.createElement('img');
+  img.className = 'cover'; img.src = F.cover; img.alt = F.title;
+  $('cover').replaceWith(img);
+}
+
+// Ticker strip (built from the featured title)
+if ($('track')) (function () {
+  const item = document.createElement('span');
+  item.textContent = F.title + '  ✦  OUT NOW  ✦ ';
+  const half = document.createElement('span');
+  for (let i = 0; i < 8; i++) half.appendChild(item.cloneNode(true));
+  $('track').append(half, half.cloneNode(true));
+})();
+
+// Video
+if (/^[\w-]{11}$/.test(CONFIG.youtubeVideoId)) {
+  const f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + CONFIG.youtubeVideoId;
+  f.title = 'Marcel Vines video'; f.loading = 'lazy'; f.allowFullscreen = true;
+  f.allow = 'accelerometer; encrypted-media; gyroscope; picture-in-picture';
+  $('video').appendChild(f);
+} else {
+  $('video').remove();
+}
+
+// Spotify
+if (/^[A-Za-z0-9]{10,30}$/.test(CONFIG.spotifyArtistId)) {
+  const f = document.createElement('iframe');
+  f.src = 'https://open.spotify.com/embed/artist/' + CONFIG.spotifyArtistId + '?utm_source=generator&theme=0';
+  f.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+  f.loading = 'lazy'; f.title = 'Marcel Vines on Spotify';
+  $('player').appendChild(f);
+} else {
+  $('music').style.display = 'none';
+}
+
+// Shows
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = CONFIG.shows.filter(s => s.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+if (upcoming.length) {
+  upcoming.forEach(s => {
+    const d = new Date(s.date + 'T12:00:00');
+    const row = document.createElement('div'); row.className = 'show';
+    const date = document.createElement('div'); date.className = 'date';
+    const mon = document.createElement('small'); mon.textContent = d.toLocaleString('en', { month: 'short' }).toUpperCase();
+    date.append(mon, String(d.getDate()));
+    const info = document.createElement('div'); info.className = 'info';
+    const b = document.createElement('b'); b.textContent = s.venue;
+    const c = document.createElement('span'); c.textContent = s.city;
+    info.append(b, c);
+    row.append(date, info);
+    if (s.url) {
+      const a = document.createElement('a');
+      a.className = 'btn sm'; a.textContent = 'Tickets'; a.href = safe(s.url); a.target = '_blank'; a.rel = 'noopener';
+      row.append(a);
+    }
+    $('showList').appendChild(row);
+  });
+} else {
+  $('shows').style.display = 'none';   // appears automatically once you add a show
+}
+
+// Mailing list
+const form = $('signup');
+if (/^https:\/\//.test(CONFIG.mailingFormAction)) {
+  form.action = CONFIG.mailingFormAction;
+  $('emailField').name = CONFIG.mailingEmailField;
+} else {
+  $('mailCard').style.display = 'none';   // hidden until a mailing list is connected
+}
+if (['merchCard', 'tipCard', 'mailCard'].every(id => $(id).style.display === 'none')) $('join').style.display = 'none';
+
+if ($('heroSub')) $('heroSub').textContent = 'New single  ·  ' + F.title;
+</script>
+</body>
+</html>
