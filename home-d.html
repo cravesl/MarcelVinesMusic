@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcel Vines</title>
+<meta name="description" content="Marcel Vines – pop artist. Listen, follow, and get in touch.">
+<meta name="theme-color" content="#efeae0">
+<meta name="robots" content="noindex, nofollow">   <!-- TEST COPY: delete this line for launch -->
+
+<!-- Share preview image: share.jpg in the same folder -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marcel Vines">
+<meta property="og:description" content="Pop artist. Listen now.">
+<meta property="og:image" content="https://marcelvinesmusic.com/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141412'/%3E%3Crect x='17' y='17' width='30' height='30' fill='none' stroke='%23efeae0' stroke-width='4'/%3E%3C/svg%3E">
+
+<!-- Analytics (optional, privacy-friendly). Uncomment after signing up:
+<script defer data-domain="marcelvinesmusic.com" src="https://plausible.io/js/script.js"></script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#efeae0;--paper2:#e6dfd1;--ink:#141412;--mut:#6b675f;--line:#c9c1b1;--red:#d6332a;--serif:"Instrument Serif",Georgia,"Times New Roman",serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;counter-reset:sec;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55;overflow-x:hidden}
+/* film grain */
+body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.12;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:960px;margin:0 auto}
+section{padding:68px 24px}
+h1,h3{font-family:var(--serif);font-weight:400}
+h2{font-family:var(--mono);font-weight:500;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;border-top:1px solid var(--ink);padding-top:14px;margin:0 0 32px}
+section h2::before{counter-increment:sec;content:counter(sec,decimal-leading-zero) "  /  "}
+
+/* HERO */
+.hero{padding:18px 24px 56px;max-width:1008px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--ink);margin-bottom:28px}
+.tick{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase}
+.socials{display:flex;gap:18px;flex-wrap:wrap}
+.socials a{color:var(--ink);text-decoration:none}
+.socials svg{display:none}
+.socials a::after{content:attr(aria-label);font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid transparent}
+.socials a:hover::after{border-bottom-color:var(--red);color:var(--red)}
+.hero-grid{display:grid;gap:32px}
+.frame{position:relative;background:#111;padding:10px 10px 36px;order:-1;max-width:520px}
+.frame img{display:block;width:100%;aspect-ratio:4/5;max-height:78vh;object-fit:cover;object-position:67% 30%;filter:grayscale(1) contrast(1.1)}
+.fn{position:absolute;bottom:10px;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:#e8a23a}
+.fn.l{left:12px}.fn.r{right:12px}
+h1{font-size:clamp(4.2rem,24vw,10rem);line-height:.86;margin:0 0 20px;letter-spacing:-.02em}
+h1 em{display:block}
+.sub{font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;margin:0 0 28px;white-space:pre}
+@media (min-width:820px){
+  .hero-grid{grid-template-columns:1.1fr .9fr;align-items:end;gap:64px}
+  .frame{order:0;justify-self:end;width:100%}
+}
+
+.btn{display:inline-block;border:0;cursor:pointer;font-family:var(--mono);font-weight:500;text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;
+  color:var(--paper);background:var(--ink);text-decoration:none;padding:16px 26px;border-radius:0;transition:background .15s,transform .15s}
+.btn:hover{background:var(--red);transform:translateY(-2px)}
+.btn.sm{padding:11px 16px;font-size:.68rem}
+
+/* NEW MUSIC */
+.latest{background:var(--paper2)}
+.feature{display:grid;gap:28px;align-items:center}
+.cover{width:100%;aspect-ratio:1;object-fit:cover;padding:10px;background:#fff;box-shadow:0 16px 36px rgba(20,20,18,.2);display:grid;place-items:center;font-size:3rem;color:var(--ink)}
+.feature .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin:0}
+.feature h3{font-size:clamp(2.6rem,12vw,4.6rem);line-height:.92;margin:10px 0 26px}
+.video{position:relative;aspect-ratio:16/9;background:#000;margin-top:34px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (min-width:760px){.feature{grid-template-columns:minmax(0,380px) 1fr;gap:56px}}
+
+.about p{font-family:var(--serif);font-size:clamp(1.7rem,6.4vw,2.5rem);line-height:1.18;max-width:700px;margin:0}
+.music{background:var(--paper2)}
+.music iframe{width:100%;height:352px;border:0;border-radius:0}
+
+.show{display:flex;align-items:center;gap:18px;border-top:1px solid var(--line);padding:16px 0}
+.show:last-child{border-bottom:1px solid var(--line)}
+.date{flex:0 0 64px;font-family:var(--serif);font-size:2rem;line-height:1}
+.date small{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;color:var(--red)}
+.show .info{flex:1;min-width:0}.show .info b{display:block;font-weight:500}.show .info span{color:var(--mut);font-size:.9rem}
+
+.stack{max-width:620px}
+.card{border-top:1px solid var(--line);padding:26px 0}
+.card:last-child{border-bottom:1px solid var(--line)}
+.card h3{margin:0 0 4px;font-size:2rem;line-height:1}
+.card p{margin:0 0 18px;color:var(--mut)}
+.signup{display:flex;gap:0}
+.signup input{flex:1;min-width:0;font:inherit;padding:14px;border:1px solid var(--ink);border-right:0;border-radius:0;background:transparent;color:var(--ink)}
+.signup input::placeholder{color:var(--mut)}
+.signup input:focus{outline:2px solid var(--red);outline-offset:-2px}
+.fine{font-size:.75rem;margin:10px 0 0!important}
+
+footer{padding:60px 24px 76px;text-align:center;background:var(--ink);color:var(--paper)}
+footer p{margin:0 0 18px;opacity:.65;font-family:var(--mono);letter-spacing:.22em;text-transform:uppercase;font-size:.7rem}
+.links{display:flex;justify-content:center;gap:34px}
+.links a{color:var(--paper);font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;font-size:.78rem;text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:2px;text-underline-offset:6px}
+.links a:hover{color:#fff}
+.booking{margin-top:30px!important;text-transform:none!important;letter-spacing:0!important;font-family:"IBM Plex Sans",sans-serif!important;font-size:.95rem!important;opacity:1!important}
+.booking a{color:var(--paper);font-weight:500}
+.copy{margin-top:28px;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;opacity:.45}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="top">
+    <span class="tick">Official site</span>
+    <nav class="socials" id="socials" aria-label="Social links"></nav>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-body">
+      <h1>Marcel <em>Vines</em></h1>
+      <p class="sub" id="heroSub"></p>
+      <a class="btn" href="#latest">Press play</a>
+    </div>
+    <div class="frame">
+      <img src="hero.jpg" alt="Marcel Vines">
+      <span class="fn l">▸ 14</span><span class="fn r">14A</span>
+    </div>
+  </div>
+</header>
+
+<section class="latest" id="latest">
+  <div class="wrap">
+    <h2>New music</h2>
+    <div class="feature">
+      <div class="cover" id="cover" aria-hidden="true">♪</div>
+      <div>
+        <p class="tag" id="featTag"></p>
+        <h3 id="featTitle"></h3>
+        <a class="btn" id="featBtn" href="#" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+    <div class="video" id="video"></div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p id="statement"></p>
+  </div>
+</section>
+
+<section class="music" id="music">
+  <div class="wrap">
+    <h2>Listen</h2>
+    <div id="player"></div>
+  </div>
+</section>
+
+<section class="shows" id="shows">
+  <div class="wrap">
+    <h2>Live</h2>
+    <div id="showList"></div>
+  </div>
+</section>
+
+<section class="support" id="join">
+  <div class="wrap">
+    <h2>Stay close</h2>
+    <div class="stack">
+      <div class="card" id="merchCard">
+        <h3>Wear it</h3>
+        <p>Official Marcel Vines gear.</p>
+        <a class="btn" id="merch" href="#" target="_blank" rel="noopener">Shop merch</a>
+      </div>
+      <div class="card" id="tipCard">
+        <h3>Fuel the next song</h3>
+        <p>Every bit helps me keep making music.</p>
+        <a class="btn" id="tip" href="#" target="_blank" rel="noopener">Leave a tip</a>
+      </div>
+      <div class="card" id="mailCard">
+        <h3>Get it first</h3>
+        <p>New music, shows, and merch drops. Zero spam.</p>
+        <form class="signup" id="signup" method="post" target="_blank">
+          <input type="email" name="email" id="emailField" placeholder="Your email" required aria-label="Email address">
+          <button class="btn" type="submit">Join</button>
+        </form>
+        <p class="fine">We’ll only use your email to send Marcel’s updates. Unsubscribe any time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Press &amp; booking</p>
+  <div class="links">
+    <a id="epk" href="#" target="_blank" rel="noopener">EPK</a>
+    <a id="linktree" href="#" target="_blank" rel="noopener">Linktree</a>
+  </div>
+  <p class="booking">Booking: <a id="booking" href="#"></a></p>
+  <div class="copy">© <span id="yr"></span> Marcel Vines</div>
+</footer>
+
+<script>
+/* ===== EDIT THESE ===== */
+const CONFIG = {
+  statement: "I’m a pop artist from Boston. My new single, “LUV U RIGHT,” is out now. Thanks for listening.",
+
+  socials: {                      // leave "" to hide an icon
+    instagram: "https://instagram.com/marcelvinesmusic",
+    tiktok: "https://tiktok.com/@marcelvinesmusic",
+    youtube: "https://youtube.com/@marcelvinesmusic",
+    spotify: "https://open.spotify.com/artist/3RWStmRNn1y7AnsHaXyfJK"
+  },
+
+  featured: {                     // the newest release
+    tag: "New single · Out now",
+    title: "LUV U RIGHT",
+    cta: "Stream it",
+    url: "https://open.spotify.com/artist/3RWStmRNn1y7AnsHaXyfJK",   // swap for the song’s own link later
+    cover: "cover.jpg"                     // optional: "cover.jpg" in the repo
+  },
+  youtubeVideoId: "",             // the 11 characters after v= in a YouTube link
+  spotifyArtistId: "3RWStmRNn1y7AnsHaXyfJK",
+
+  shows: [                        // e.g. { date: "2027-03-14", venue: "Venue", city: "City", url: "https://…" }
+  ],
+
+  merchUrl: "#",                  // Printify store link
+  tipUrl: "https://example.com/tip",   // PLACEHOLDER: replace with Ko-fi, Buy Me a Coffee, PayPal.me, etc.
+  mailingFormAction: "https://example.com/subscribe",   // PLACEHOLDER: replace with the form URL from your email provider
+  mailingEmailField: "email",     // the email field name your provider expects
+
+  epkUrl: "https://epkbuilder.com/site/marcel-vines",
+  linktreeUrl: "https://linktr.ee/marcelvinesmusic",
+  bookingEmail: "marcelvinesmusic@gmail.com"
+};
+/* ====================== */
+
+const $ = id => document.getElementById(id);
+const ICONS = {
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>',
+  tiktok: '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.4 2.6 2.1 4.2 5 4.4"/>',
+  youtube: '<rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor"/>',
+  spotify: '<circle cx="12" cy="12" r="9.5"/><path d="M7 9.5c3.5-1 7-.7 10 1M7.5 12.5c3-.8 6-.5 8.5 1M8 15.3c2.5-.6 5-.3 7 .8"/>'
+};
+const safe = u => /^(https?:\/\/|#)/.test(u || '') ? u : '#';
+
+// Socials
+Object.entries(CONFIG.socials).forEach(([name, url]) => {
+  if (!url || !ICONS[name]) return;
+  const a = document.createElement('a');
+  a.href = safe(url); a.target = '_blank'; a.rel = 'noopener'; a.setAttribute('aria-label', name);
+  a.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">' + ICONS[name] + '</svg>';
+  $('socials').appendChild(a);
+});
+
+// Statement, links, footer
+$('statement').textContent = CONFIG.statement;
+$('epk').href = safe(CONFIG.epkUrl);
+$('linktree').href = safe(CONFIG.linktreeUrl);
+$('merch').href = safe(CONFIG.merchUrl);
+$('tip').href = safe(CONFIG.tipUrl);
+if (!/^https/.test(CONFIG.merchUrl)) $('merchCard').style.display = 'none';
+if (!/^https/.test(CONFIG.tipUrl)) $('tipCard').style.display = 'none';
+$('booking').textContent = CONFIG.bookingEmail;
+$('booking').href = 'mailto:' + CONFIG.bookingEmail;
+$('yr').textContent = new Date().getFullYear();
+
+// Featured release
+const F = CONFIG.featured;
+$('featTag').textContent = F.tag;
+$('featTitle').textContent = F.title;
+$('featBtn').textContent = F.cta;
+$('featBtn').href = safe(F.url);
+if (F.cover) {
+  const img = document.createElement('img');
+  img.className = 'cover'; img.src = F.cover; img.alt = F.title;
+  $('cover').replaceWith(img);
+}
+
+// Ticker strip (built from the featured title)
+if ($('track')) (function () {
+  const item = document.createElement('span');
+  item.textContent = F.title + '  ✦  OUT NOW  ✦ ';
+  const half = document.createElement('span');
+  for (let i = 0; i < 8; i++) half.appendChild(item.cloneNode(true));
+  $('track').append(half, half.cloneNode(true));
+})();
+
+// Video
+if (/^[\w-]{11}$/.test(CONFIG.youtubeVideoId)) {
+  const f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/' + CONFIG.youtubeVideoId;
+  f.title = 'Marcel Vines video'; f.loading = 'lazy'; f.allowFullscreen = true;
+  f.allow = 'accelerometer; encrypted-media; gyroscope; picture-in-picture';
+  $('video').appendChild(f);
+} else {
+  $('video').remove();
+}
+
+// Spotify
+if (/^[A-Za-z0-9]{10,30}$/.test(CONFIG.spotifyArtistId)) {
+  const f = document.createElement('iframe');
+  f.src = 'https://open.spotify.com/embed/artist/' + CONFIG.spotifyArtistId + '?utm_source=generator&theme=0';
+  f.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+  f.loading = 'lazy'; f.title = 'Marcel Vines on Spotify';
+  $('player').appendChild(f);
+} else {
+  $('music').style.display = 'none';
+}
+
+// Shows
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = CONFIG.shows.filter(s => s.date >= today).sort((a, b) => a.date.localeCompare(b.date));
+if (upcoming.length) {
+  upcoming.forEach(s => {
+    const d = new Date(s.date + 'T12:00:00');
+    const row = document.createElement('div'); row.className = 'show';
+    const date = document.createElement('div'); date.className = 'date';
+    const mon = document.createElement('small'); mon.textContent = d.toLocaleString('en', { month: 'short' }).toUpperCase();
+    date.append(mon, String(d.getDate()));
+    const info = document.createElement('div'); info.className = 'info';
+    const b = document.createElement('b'); b.textContent = s.venue;
+    const c = document.createElement('span'); c.textContent = s.city;
+    info.append(b, c);
+    row.append(date, info);
+    if (s.url) {
+      const a = document.createElement('a');
+      a.className = 'btn sm'; a.textContent = 'Tickets'; a.href = safe(s.url); a.target = '_blank'; a.rel = 'noopener';
+      row.append(a);
+    }
+    $('showList').appendChild(row);
+  });
+} else {
+  $('shows').style.display = 'none';   // appears automatically once you add a show
+}
+
+// Mailing list
+const form = $('signup');
+if (/^https:\/\//.test(CONFIG.mailingFormAction)) {
+  form.action = CONFIG.mailingFormAction;
+  $('emailField').name = CONFIG.mailingEmailField;
+} else {
+  $('mailCard').style.display = 'none';   // hidden until a mailing list is connected
+}
+if (['merchCard', 'tipCard', 'mailCard'].every(id => $(id).style.display === 'none')) $('join').style.display = 'none';
+
+if ($('heroSub')) $('heroSub').textContent = 'New single  /  ' + F.title;
+</script>
+</body>
+</html>
